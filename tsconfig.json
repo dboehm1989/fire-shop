@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "types": ["vuetify", "unplugin-vue2-script-setup/types", "vite/client"],
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost", "WebWorker"]
+  },
+  "vueCompilerOptions": {
+    "target": 3,
+    "experimentalCompatMode": 2,
+    "extensions": [
+      ".vue"
+    ]
+  },
+  "include": ["env.d.ts", "components.d.ts", "src/**/*", "src/**/*.vue"],
+  "exclude": ["node_modules", "tests/*"]
+  }
