@@ -1,18 +1,11 @@
 <template>
   <Header />
-  <main>
-    <SectionDescription />
-    <SectionDetails />
-    <SectionSlider />
-  </main>
+  <MainProduct />
   <Footer />
 </template>
 
 <script setup lang="ts">
-// Components
 import Header from '@/components/header/Header.vue';
-import SectionDescription from '@/components/product/description/Description.vue';
-import SectionDetails from '@/components/product/details/Details.vue';
-import SectionSlider from '@/components/product/slider/Slider.vue';
+import MainProduct from '@/components/product/Product.vue';
 import Footer from '@/components/footer/Footer.vue';
 </script>

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "pinia": "^2.0.28",
     "unplugin-auto-import": "^0.12.1",
     "vite-plugin-loading-indicator": "^1.0.0",
     "vue": "^3.2.45"
