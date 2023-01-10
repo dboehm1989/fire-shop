@@ -1,0 +1,34 @@
+.text-block {
+  &__category {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  &__title {
+    font-size: 3em;
+    width: 80%;
+    color: var(--black);
+  }
+
+  &__box {
+    margin-left: 4em;
+    width: 50%;
+  }
+
+  &__price {
+    color: var(--primary);
+  }
+
+  &__id {
+    font-size: smaller;
+  }
+
+  &__text {
+    margin-bottom: 1.5em;
+  }
+
+  &__button {
+    color: var(--white);
+    background: var(--primary);
+  }
+}

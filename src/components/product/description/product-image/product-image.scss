@@ -1,0 +1,64 @@
+.image-block {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .preview-images {
+    width: 80px;
+    height: 450px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .preview-image {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    float: none;
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &:first-of-type {
+      z-index: 2;
+    }
+    &:not(:first-of-type) {
+      opacity: 0.5;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .large-image {
+    &.active {
+      animation: show-image 0.5s ease-out;
+    }
+
+    width: 80%;
+    height: 450px;
+    top: 0;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-size: 560px;
+    background-repeat: no-repeat;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @keyframes show-image {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+}
