@@ -25,7 +25,7 @@
     &:first-of-type {
       z-index: 2;
     }
-    &:not(:first-of-type) {
+    &:not(.active) {
       opacity: 0.5;
     }
     &:hover {
