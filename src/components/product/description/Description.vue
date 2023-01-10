@@ -4,7 +4,7 @@
       <div class="container">
         <div class="desc__content">
           <ProductImage class="desc__image" />
-          <ProductText class="desc__itext" />
+          <ProductText class="desc__text" />
         </div>
       </div>
     </div>
@@ -26,6 +26,7 @@ import ProductText from './product-text/ProductText.vue';
 
   &__image {
     width: 50%;
+    min-width: 400px;
   }
 
   &__text {
