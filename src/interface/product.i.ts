@@ -30,3 +30,10 @@ export interface IProduct {
   };
   relatedProducts: string[];
 }
+
+export interface IProductPrice {
+  id: string;
+  isActive: boolean;
+  price: number;
+  priceFormatted: string;
+}
