@@ -1,6 +1,10 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
-import './style.css';
+
+import 'bulma/css/bulma.css';
+import '@/assets/style/index.scss';
+import '@/assets/style/bulma-variables.scss';
+
 import App from './App.vue';
 
 const pinia = createPinia();

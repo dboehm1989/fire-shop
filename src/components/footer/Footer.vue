@@ -1,9 +1,11 @@
 <template>
   <footer>
-    <div class="grid-container">
-      <div class="grid-item">Kontaktdaten</div>
-      <div class="grid-item">Customer Care</div>
-      <div class="grid-item">Stay in touch</div>
+    <div class="container">
+      <div class="grid-container">
+        <div class="grid-item">Kontaktdaten</div>
+        <div class="grid-item">Customer Care</div>
+        <div class="grid-item">Stay in touch</div>
+      </div>
     </div>
   </footer>
 </template>

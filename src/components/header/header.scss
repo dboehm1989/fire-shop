@@ -1,0 +1,47 @@
+header .container {
+  height: 120px;
+  border: 1px solid red;
+}
+
+// Topbar
+.topbar {
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+
+  .level-left .level-item:not(:last-child), 
+  .level-right .level-item:not(:last-child) {
+    margin-right: 1.5em;
+  }
+
+  .level-item {
+    width: 20px;
+    height: auto;
+  }
+}
+
+// Navigation
+.navigation {
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    max-width: 250px;
+    max-height: 50px;
+  }
+
+  
+  .level-left .level-item:not(:last-child), 
+  .level-right .level-item:not(:last-child) {
+    margin-right: 4em;
+  }
+
+  .level-item {
+    color: var(--black);
+    text-transform: uppercase; 
+    font-weight: 600;
+  }
+  
+}
+

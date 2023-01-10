@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Minion Pro';
+  src: url('@/assets/font/Minion Pro Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trade Gothic LT';
+  src: url('@/assets/font/Trade Gothic LT.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trade Gothic LT';
+  src: url('@/assets/font/Trade Gothic LT Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trade Gothic LT';
+  src: url('@/assets/font/Trade Gothic LT Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: bold;
+}

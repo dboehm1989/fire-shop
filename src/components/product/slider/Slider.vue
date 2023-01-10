@@ -1,5 +1,7 @@
 <template>
   <section>
-    <h2>Product Characteristics</h2>
+    <div class="container">
+      <h2>Product Characteristics</h2>
+    </div>
   </section>
 </template>
