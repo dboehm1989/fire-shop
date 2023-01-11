@@ -1,22 +1,25 @@
 <template>
   <div class="item-box">
-    <img src="@/assets/img/img01.png" width="300px" height="300px" />
+    <img :src="`/src/assets/img/img01.png`" />
     <div class="product-info">
-      <h3>Title</h3>
-      <p>Category</p>
-      <p>SKU</p>
-      <p>Preis</p>
+      <p>{{ item?.category }}</p>
+      <h3>{{ item?.subTitle }}</h3>
+      <p>{{ item?.sku }}</p>
+      <p>{{ item?.priceFormatted }}</p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { IProductPrice } from '@/interface/product.i';
+import { useProductStore } from '@/stores/product';
 
-defineProps({
-  item: {
-    type: Object as () => IProductPrice,
+const props = defineProps({
+  sku: {
+    type: String,
     default: undefined,
   },
 });
+
+const $product = useProductStore();
+const item = computed(() => $product.getRelatedPiecesProduct(props.sku));
 </script>

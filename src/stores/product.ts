@@ -11,9 +11,6 @@ export const useProductStore = defineStore('product', {
   getters: {
     getItem: state => state.products.find(item => item.sku === state.selectedSku),
     getPrice: state => state.price.find(item => item.sku === state.selectedSku),
-    getRelatedPieces() {
-      return this.getItem?.relatedProducts.map((sku: string) => this.price.find(item => item.sku === sku));
-    },
   },
   actions: {
     async loadProducts() {
@@ -21,6 +18,19 @@ export const useProductStore = defineStore('product', {
     },
     async loadProductPrice() {
       this.price = await ProductService.getProductPrice();
+    },
+    getRelatedPiecesProduct(sku?: string) {
+      if (!sku) return;
+      const product = this.products.find(item => item.sku === sku);
+      const price = this.price.find(item => item.sku === sku);
+
+      return {
+        sku,
+        price: price?.price,
+        priceFormatted: price?.priceFormatted,
+        subTitle: product?.subTitle,
+        category: product?.category,
+      };
     },
   },
 });

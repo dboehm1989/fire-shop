@@ -1,7 +1,7 @@
 <template>
   <Carousel :settings="settings" :breakpoints="breakpoints">
-    <Slide v-for="slide in $product.getRelatedPieces" :key="slide">
-      <SliderItem />
+    <Slide v-for="sku in $product.getItem?.relatedProducts" :key="sku">
+      <SliderItem :sku="sku" />
     </Slide>
 
     <template #addons>
