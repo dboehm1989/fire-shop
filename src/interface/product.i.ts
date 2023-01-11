@@ -4,11 +4,16 @@ interface IMedia {
   sortOrder: number;
 }
 
-interface IProductDetails {
+interface IProductDetailsData {
   title: string;
   text: string;
   iconTarget: string;
   sortOrder: number;
+}
+
+export interface IProductDetails {
+  title: string;
+  data: IProductDetailsData[];
 }
 
 export interface IProduct {
@@ -20,14 +25,8 @@ export interface IProduct {
   shortDescription: string;
   isActive: boolean;
   medias: IMedia[];
-  productDetails: {
-    title: string;
-    data: IProductDetails[];
-  };
-  productSpecifications: {
-    title: string;
-    data: IProductDetails[];
-  };
+  productDetails: IProductDetails;
+  productSpecifications: IProductDetails;
   relatedProducts: string[];
 }
 

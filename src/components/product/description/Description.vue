@@ -16,7 +16,7 @@ import BlockImage from './block-image/BlockImage.vue';
 import BlockText from './block-text/BlockText.vue';
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 .desc {
   background: var(--gray);
 
