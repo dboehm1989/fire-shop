@@ -1,13 +1,13 @@
 .block-text {
   &__category {
-    color: var(--primary);
+    color: var(--color-primary);
     font-weight: 600;
   }
 
   &__title {
     font-size: 3.5em;
     width: 75%;
-    color: var(--black);
+    color: var(--color-dark);
     font-weight: 400;
   }
 
@@ -17,7 +17,7 @@
   }
 
   &__price {
-    color: var(--primary);
+    color: var(--color-primary);
   }
 
   &__sku {
@@ -29,7 +29,7 @@
   }
 
   &__button {
-    color: var(--white);
-    background: var(--primary);
+    color: var(--color-white);
+    background: var(--color-primary);
   }
 }

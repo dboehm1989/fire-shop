@@ -375,6 +375,11 @@ local-pkg@^0.4.2:
   resolved "https://registry.npmjs.org/local-pkg/-/local-pkg-0.4.2.tgz"
   integrity sha512-mlERgSPrbxU3BP4qBqAvvwlgW4MTg78iwJdGGnv7kibKjWcJksrG3t6LB5lXI93wXRDvG4NpUgJFmTG4T6rdrg==
 
+lodash@^4.17.11:
+  version "4.17.21"
+  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+
 magic-string@^0.25.7:
   version "0.25.9"
   resolved "https://registry.npmjs.org/magic-string/-/magic-string-0.25.9.tgz"
@@ -566,6 +571,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+tiny-slider@^2.9.2:
+  version "2.9.4"
+  resolved "https://registry.npmjs.org/tiny-slider/-/tiny-slider-2.9.4.tgz"
+  integrity sha512-LAs2kldWcY+BqCKw4kxd4CMx2RhWrHyEePEsymlOIISTlOVkjfK40sSD7ay73eKXBLg/UkluAZpcfCstimHXew==
+
 to-regex-range@^5.0.1:
   version "5.0.1"
   resolved "https://registry.npmjs.org/to-regex-range/-/to-regex-range-5.0.1.tgz"
@@ -638,6 +648,14 @@ vue-demi@*:
   version "0.13.11"
   resolved "https://registry.npmjs.org/vue-demi/-/vue-demi-0.13.11.tgz"
   integrity sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==
+
+vue-tiny-slider@^0.1.39:
+  version "0.1.39"
+  resolved "https://registry.npmjs.org/vue-tiny-slider/-/vue-tiny-slider-0.1.39.tgz"
+  integrity sha512-dLOuMI6YyIBabXPZTQ0LL2jhOqZuwsCD7ztPEoE1ejFQ9GNxyRxwkRsIwUtVnq5SCTzQAhCYlgoibyMGoDHReA==
+  dependencies:
+    lodash "^4.17.11"
+    tiny-slider "^2.9.2"
 
 "vue@^2.6.14 || ^3.2.0", "vue@^3.0.0-0 || ^2.6.0", vue@^3.2.25, vue@^3.2.45, vue@3.2.45:
   version "3.2.45"

@@ -36,7 +36,6 @@ const props = defineProps({
 });
 
 const isTypeProductDetail = computed(() => props.type === 'product-detail');
-// flex-direction: row-reverse;
 const categoryText = computed(() => (isTypeProductDetail.value ? 'Product Details' : 'Specifications'));
 </script>
 

@@ -2,13 +2,13 @@
   justify-content: space-between;
 
   &__category {
-    color: var(--primary);
+    color: var(--color-primary);
     text-transform: uppercase;
     font-weight: 600;
   }
 
   &__title {
-    color: var(--black);
+    color: var(--color-dark);
     font-weight: 400;
   }
 
@@ -33,7 +33,7 @@
       }
 
       &__title {
-        color: var(--gray);
+        color: var(--color-gray);
       }
 
       &__text {
@@ -45,6 +45,8 @@
 
   &__image {
     padding: 0;
-    background: var(--black);
+    display: flex;
+    background: var(--color-dark);
+    max-height: 540px;;
   }
 }
