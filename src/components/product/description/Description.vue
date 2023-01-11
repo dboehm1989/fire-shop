@@ -18,7 +18,7 @@ import BlockText from './block-text/BlockText.vue';
 
 <style lang="scss" scoped>
 .desc {
-  background: var(--bg-gray);
+  background: var(--color-gray-2);
 
   &__body {
     padding-left: 0;

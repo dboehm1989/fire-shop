@@ -18,7 +18,7 @@ import BlockSlider from './block-slider/Slider.vue';
 <style lang="scss" scoped>
 .related-pieces {
   color: var(--color-white);
-  background: var(--bg-black);
+  background: var(--color-black-2);
 
   &__body {
     padding: 5em 0;
