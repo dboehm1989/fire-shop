@@ -22,16 +22,13 @@ export const useProductStore = defineStore('product', {
     getRelatedPiecesProduct(sku?: string) {
       if (!sku || !this.products || !this.price) return;
       const product = this.products.find(item => item.sku === sku) as IProduct;
-      const price = this.price.find(item => item.sku === sku) as IProductPrice;
+      const productPrice = this.price.find(item => item.sku === sku) as IProductPrice;
 
-      return {
-        sku,
-        price: price?.price,
-        priceFormatted: price?.priceFormatted,
-        subTitle: product?.subTitle,
-        category: product?.category,
-        imgPath: product?.medias.find(media => media.targetAttr === 'sliderImage')?.path,
-      } as IRelatedPieces;
+      const { subTitle, category, medias } = product;
+      const { price, priceFormatted } = productPrice;
+      const imgPath = medias.find(media => media.targetAttr === 'sliderImage')?.path;
+
+      return { sku, price, priceFormatted, subTitle, category, imgPath } as IRelatedPieces;
     },
     getSortedRelatedPieces() {
       const relatedProducts = this.getItem?.relatedProducts?.map(this.getRelatedPiecesProduct) as IRelatedPieces[];
