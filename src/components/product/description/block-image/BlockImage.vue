@@ -1,5 +1,5 @@
 <template>
-  <div class="image-block">
+  <div class="block-image">
     <div class="preview-images">
       <img
         v-for="img in imgs"
@@ -29,5 +29,5 @@ const backgroundImageStyle = computed(() => `background-image: url(src/assets/im
 </script>
 
 <style lang="scss" scoped>
-@import './product-image.scss';
+@import './block-image.scss';
 </style>

@@ -3,8 +3,8 @@
     <div class="hero-body">
       <div class="container">
         <div class="desc__content">
-          <ProductImage class="desc__image" />
-          <ProductText class="desc__text" />
+          <BlockImage class="desc__image" />
+          <BlockText class="desc__text" />
         </div>
       </div>
     </div>
@@ -12,8 +12,8 @@
 </template>
 
 <script setup lang="ts">
-import ProductImage from './product-image/ProductImage.vue';
-import ProductText from './product-text/ProductText.vue';
+import BlockImage from './block-image/BlockImage.vue';
+import BlockText from './block-text/BlockText.vue';
 </script>
 
 <style lang="scss" scope>
