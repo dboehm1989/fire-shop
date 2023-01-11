@@ -14,9 +14,8 @@
     "pinia": "^2.0.28",
     "sass": "^1.57.1",
     "unplugin-auto-import": "^0.12.1",
-    "vite-plugin-loading-indicator": "^1.0.0",
     "vue": "^3.2.45",
-    "vue-tiny-slider": "^0.1.39"
+    "vue3-carousel": "^0.2.9"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",

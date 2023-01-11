@@ -11,6 +11,9 @@ export const useProductStore = defineStore('product', {
   getters: {
     getItem: state => state.products.find(item => item.sku === state.selectedSku),
     getPrice: state => state.price.find(item => item.sku === state.selectedSku),
+    getRelatedPieces() {
+      return this.getItem?.relatedProducts.map((sku: string) => this.price.find(item => item.sku === sku));
+    },
   },
   actions: {
     async loadProducts() {
