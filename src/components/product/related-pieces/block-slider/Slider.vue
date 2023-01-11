@@ -1,6 +1,6 @@
 <template>
   <Carousel :settings="settings" :breakpoints="breakpoints">
-    <Slide v-for="item in $product.getSortedRelatedPieces()" :key="item.sku">
+    <Slide v-for="(item, idx) of sortRelatedPieces" :key="idx">
       <SliderItem :item="item" />
     </Slide>
 
@@ -21,6 +21,7 @@ import { useProductStore } from '@/stores/product';
 const { settings, breakpoints } = useSliderSettings();
 
 const $product = useProductStore();
+const sortRelatedPieces = computed(() => $product.getSortedRelatedPieces());
 </script>
 
 <style lang="scss" scoped>

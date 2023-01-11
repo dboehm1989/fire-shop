@@ -19,8 +19,8 @@ export const useProductStore = defineStore('product', {
     async loadProductPrice() {
       this.price = await ProductService.getProductPrice();
     },
-    getRelatedPiecesProduct(sku?: string) {
-      if (!sku || !this.products || !this.price) return;
+    getRelatedPiecesProduct(sku: string) {
+      if (!sku || !this.products?.length || !this.price?.length) return;
       const product = this.products.find(item => item.sku === sku) as IProduct;
       const productPrice = this.price.find(item => item.sku === sku) as IProductPrice;
 
@@ -31,7 +31,9 @@ export const useProductStore = defineStore('product', {
       return { id, sku, price, priceFormatted, subTitle, category, imgPath } as IRelatedPieces;
     },
     getSortedRelatedPieces() {
-      const relatedProducts = this.getItem?.relatedProducts?.map(this.getRelatedPiecesProduct) as IRelatedPieces[];
+      const relatedProductsSku = this.getItem?.relatedProducts;
+      if (!relatedProductsSku?.length) return;
+      const relatedProducts = relatedProductsSku?.map(this.getRelatedPiecesProduct) as IRelatedPieces[];
       return relatedProducts?.sort((a, b) => b.price - a.price);
     },
   },

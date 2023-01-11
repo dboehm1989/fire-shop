@@ -2,10 +2,14 @@
   <section class="related-pieces hero">
     <div class="related-pieces__body hero-body">
       <div class="container">
-        <p class="related-pieces__category">Altiplano Collection</p>
-        <h2 class="title">Related Pieces</h2>
+        <div class="columns">
+          <div class="column is-4">
+            <p class="related-pieces__category">Altiplano Collection</p>
+            <h2 class="title">Related Pieces</h2>
+          </div>
 
-        <BlockSlider />
+          <BlockSlider class="column is-8" />
+        </div>
       </div>
     </div>
   </section>
