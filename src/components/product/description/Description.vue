@@ -18,7 +18,7 @@ import BlockText from './block-text/BlockText.vue';
 
 <style lang="scss" scoped>
 .desc {
-  background: var(--gray);
+  background: var(--bg-gray);
 
   &__content {
     display: flex;

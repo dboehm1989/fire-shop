@@ -1,14 +1,14 @@
 <template>
-  <section class="desc hero is-medium">
+  <section class="desc hero">
     <div class="hero-body">
       <div class="container">
-        <BlockInfo category="Product Details" :product-details="productDetails" />
+        <BlockDetails type="product-detail" :product-details="productDetails" />
       </div>
     </div>
 
     <div class="hero-body">
       <div class="container">
-        <BlockInfo category="Specifications" :product-details="productSpecifications" />
+        <BlockDetails type="specification" :product-details="productSpecifications" />
       </div>
     </div>
   </section>
@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import { useProductStore } from '@/stores/product';
-import BlockInfo from './block-info/BlockInfo.vue';
+import BlockDetails from './block-details/BlockDetails.vue';
 
 const productDetails = computed(() => $product.getItem?.productDetails);
 const productSpecifications = computed(() => $product.getItem?.productSpecifications);

@@ -1,0 +1,44 @@
+.details {
+  justify-content: space-between;
+
+  &__title {
+    color: var(--black);
+    font-weight: 400;
+  }
+
+  &__items {
+    .item {
+      display: grid;
+      padding: 1em;
+      grid-template-columns: 5em 2fr;
+
+      &__img {
+        width: 48px;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      &__title,
+      &__text {
+        margin: 0;
+      }
+
+      &__title {
+        color: var(--gray);
+      }
+
+      &__text {
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__image {
+    padding: 0;
+    background: var(--black);
+  }
+}
