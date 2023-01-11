@@ -1,10 +1,10 @@
 <template>
   <section class="desc hero is-medium">
-    <div class="hero-body">
+    <div class="desc__body hero-body">
       <div class="container">
-        <div class="desc__content">
-          <BlockImage class="desc__image" />
-          <BlockText class="desc__text" />
+        <div class="desc__content columns">
+          <BlockImage class="desc__image column" />
+          <BlockText class="desc__text column" />
         </div>
       </div>
     </div>
@@ -20,17 +20,18 @@ import BlockText from './block-text/BlockText.vue';
 .desc {
   background: var(--bg-gray);
 
+  &__body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &__content {
     display: flex;
   }
 
   &__image {
-    width: 50%;
     min-width: 400px;
-  }
-
-  &__text {
-    width: 50%;
+    padding: 0;
   }
 }
 </style>

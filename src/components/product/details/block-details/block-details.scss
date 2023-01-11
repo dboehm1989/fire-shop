@@ -1,6 +1,12 @@
 .details {
   justify-content: space-between;
 
+  &__category {
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
   &__title {
     color: var(--black);
     font-weight: 400;

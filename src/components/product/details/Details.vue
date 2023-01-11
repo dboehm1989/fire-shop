@@ -1,12 +1,12 @@
 <template>
-  <section class="desc hero">
-    <div class="hero-body">
+  <section class="details hero">
+    <div class="details__body hero-body">
       <div class="container">
         <BlockDetails type="product-detail" :product-details="productDetails" />
       </div>
     </div>
 
-    <div class="hero-body">
+    <div class="details__body hero-body">
       <div class="container">
         <BlockDetails type="specification" :product-details="productSpecifications" />
       </div>
@@ -23,3 +23,11 @@ const productSpecifications = computed(() => $product.getItem?.productSpecificat
 
 const $product = useProductStore();
 </script>
+
+<style lang="scss" scoped>
+.details {
+  &__body {
+    padding: 5em 0;
+  }
+}
+</style>
