@@ -4,7 +4,7 @@
     <h1 class="text-block__title title">{{ item?.title }}</h1>
 
     <div class="text-block__box">
-      <p class="text-block__price">CHF 35`700.00</p>
+      <p class="text-block__price">{{ price?.priceFormatted }}</p>
       <p class="text-block__sku">Watch {{ item?.sku }}</p>
       <p class="text-block__text">{{ item?.shortDescription }}</p>
 
@@ -17,7 +17,8 @@
 import { useProductStore } from '@/stores/product';
 
 const $product = useProductStore();
-const item = computed(() => $product.openedItem);
+const item = computed(() => $product.getItem);
+const price = computed(() => $product.getPrice);
 </script>
 
 <style lang="scss">

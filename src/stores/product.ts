@@ -9,7 +9,8 @@ export const useProductStore = defineStore('product', {
     price: [] as IProductPrice[],
   }),
   getters: {
-    openedItem: state => state.products.find(item => item.sku === state.selectedSku),
+    getItem: state => state.products.find(item => item.sku === state.selectedSku),
+    getPrice: state => state.price.find(item => item.sku === state.selectedSku),
   },
   actions: {
     async loadProducts() {

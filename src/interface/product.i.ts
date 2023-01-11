@@ -33,6 +33,7 @@ export interface IProduct {
 
 export interface IProductPrice {
   id: string;
+  sku: string;
   isActive: boolean;
   price: number;
   priceFormatted: string;

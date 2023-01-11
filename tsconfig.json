@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": ["vuetify", "unplugin-vue2-script-setup/types", "vite/client"],
+    "types": ["vuetify", "vite/client"],
     "paths": {
       "@/*": ["src/*"]
     },
