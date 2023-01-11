@@ -37,3 +37,12 @@ export interface IProductPrice {
   price: number;
   priceFormatted: string;
 }
+
+export interface IRelatedPieces {
+  sku: string;
+  price: number;
+  priceFormatted: string;
+  subTitle: string;
+  category: string;
+  imgPath: string;
+}

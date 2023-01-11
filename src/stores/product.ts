@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { IProduct, IProductPrice } from '@/interface/product.i';
+import { IProduct, IProductPrice, IRelatedPieces } from '@/interface/product.i';
 import ProductService from '@/services/productService';
 
 export const useProductStore = defineStore('product', {
@@ -20,9 +20,9 @@ export const useProductStore = defineStore('product', {
       this.price = await ProductService.getProductPrice();
     },
     getRelatedPiecesProduct(sku?: string) {
-      if (!sku) return;
-      const product = this.products.find(item => item.sku === sku);
-      const price = this.price.find(item => item.sku === sku);
+      if (!sku || !this.products || !this.price) return;
+      const product = this.products.find(item => item.sku === sku) as IProduct;
+      const price = this.price.find(item => item.sku === sku) as IProductPrice;
 
       return {
         sku,
@@ -30,7 +30,12 @@ export const useProductStore = defineStore('product', {
         priceFormatted: price?.priceFormatted,
         subTitle: product?.subTitle,
         category: product?.category,
-      };
+        imgPath: product?.medias.find(media => media.targetAttr === 'sliderImage')?.path,
+      } as IRelatedPieces;
+    },
+    getSortedRelatedPieces() {
+      const relatedProducts = this.getItem?.relatedProducts?.map(this.getRelatedPiecesProduct) as IRelatedPieces[];
+      return relatedProducts?.sort((a, b) => b.price - a.price);
     },
   },
 });
