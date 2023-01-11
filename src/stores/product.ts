@@ -24,11 +24,11 @@ export const useProductStore = defineStore('product', {
       const product = this.products.find(item => item.sku === sku) as IProduct;
       const productPrice = this.price.find(item => item.sku === sku) as IProductPrice;
 
-      const { subTitle, category, medias } = product;
+      const { id, subTitle, category, medias } = product;
       const { price, priceFormatted } = productPrice;
       const imgPath = medias.find(media => media.targetAttr === 'sliderImage')?.path;
 
-      return { sku, price, priceFormatted, subTitle, category, imgPath } as IRelatedPieces;
+      return { id, sku, price, priceFormatted, subTitle, category, imgPath } as IRelatedPieces;
     },
     getSortedRelatedPieces() {
       const relatedProducts = this.getItem?.relatedProducts?.map(this.getRelatedPiecesProduct) as IRelatedPieces[];

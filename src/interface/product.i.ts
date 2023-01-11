@@ -39,6 +39,7 @@ export interface IProductPrice {
 }
 
 export interface IRelatedPieces {
+  id: string;
   sku: string;
   price: number;
   priceFormatted: string;
