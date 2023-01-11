@@ -2,8 +2,7 @@ import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 
 import 'bulma/css/bulma.css';
-import '@/assets/style/index.scss';
-import '@/assets/style/bulma-variables.scss';
+import '@/styles/index.scss';
 
 import App from './App.vue';
 
