@@ -5,7 +5,7 @@
         <div class="columns">
           <div class="description column is-3">
             <p class="description__category">Altiplano Collection</p>
-            <h2 class="description__title title">Related Pieces</h2>
+            <h2 class="description__title is-size-3">Related Pieces</h2>
             <div class="description__actions">
               <button class="description__prev button is-rounded" @click="currentSlide += 1">
                 <img src="@/assets/icon/arrow.png" />
@@ -26,7 +26,7 @@
                     <img class="item__image" :src="`/src/assets/img/${item?.imgPath}`" />
                     <div class="item__content">
                       <p class="item__category">{{ item?.category }}</p>
-                      <h3 class="item__title title">{{ item?.subTitle }}</h3>
+                      <h3 class="item__title is-size-4">{{ item?.subTitle }}</h3>
                       <p class="item__sku">Watch {{ item?.sku }}</p>
                       <p class="item__price">{{ item?.priceFormatted }}</p>
                     </div>
