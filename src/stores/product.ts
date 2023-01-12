@@ -32,7 +32,7 @@ export const useProductStore = defineStore('product', {
     },
     getSortedRelatedPieces() {
       const relatedProductsSku = this.getItem?.relatedProducts;
-      if (!relatedProductsSku?.length) return;
+      if (!relatedProductsSku?.length) return [];
       const relatedProducts = relatedProductsSku?.map(this.getRelatedPiecesProduct) as IRelatedPieces[];
       return relatedProducts?.sort((a, b) => b.price - a.price);
     },
