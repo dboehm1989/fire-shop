@@ -3,12 +3,12 @@
     <div class="related-pieces__body hero-body">
       <div class="container">
         <div class="columns">
-          <div class="column is-4">
+          <div class="column is-3">
             <p class="related-pieces__category">Altiplano Collection</p>
             <h2 class="title">Related Pieces</h2>
           </div>
 
-          <BlockSlider class="column is-8" />
+          <BlockSlider class="column is-9" />
         </div>
       </div>
     </div>

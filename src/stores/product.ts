@@ -1,4 +1,3 @@
-import { defineStore } from 'pinia';
 import { IProduct, IProductPrice, IRelatedPieces } from '@/interface/product.i';
 import ProductService from '@/services/productService';
 

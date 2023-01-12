@@ -1,4 +1,4 @@
-export function useSliderSettings() {
+export function useSliderOptions() {
   const settings = reactive({
     itemsToShow: 1,
     snapAlign: 'center',

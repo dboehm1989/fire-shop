@@ -8,7 +8,7 @@ export default defineConfig(({ command, mode }) => {
     plugins: [
       vue(),
       AutoImport({
-        imports: ['vue'],
+        imports: ['vue', 'pinia'],
         dts: 'src/auto-imports.d.ts',
         vueTemplate: true,
       }),
