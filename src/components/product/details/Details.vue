@@ -2,13 +2,13 @@
   <section class="details hero">
     <div class="details__body hero-body">
       <div class="container">
-        <BlockDetails type="product-detail" :product-details="productDetails" />
+        <BlockDetails type="detail-1" :product-details="productDetails" />
       </div>
     </div>
 
     <div class="details__body hero-body">
       <div class="container">
-        <BlockDetails type="specification" :product-details="productSpecifications" />
+        <BlockDetails type="detail-2" :product-details="productSpecifications" />
       </div>
     </div>
   </section>
@@ -18,10 +18,9 @@
 import { useProductStore } from '@/stores/product';
 import BlockDetails from './block-details/BlockDetails.vue';
 
+const $product = useProductStore();
 const productDetails = computed(() => $product.getItem?.productDetails);
 const productSpecifications = computed(() => $product.getItem?.productSpecifications);
-
-const $product = useProductStore();
 </script>
 
 <style lang="scss" scoped>
