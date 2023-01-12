@@ -30,11 +30,11 @@ export const useProductStore = defineStore('product', {
 
       return { id, sku, price, priceFormatted, subTitle, category, imgPath } as IRelatedPieces;
     },
-    getSortedRelatedPieces() {
+    getSortedRelatedPieces(sortType: 'min' | 'max') {
       const relatedProductsSku = this.getItem?.relatedProducts;
       if (!relatedProductsSku?.length) return [];
       const relatedProducts = relatedProductsSku?.map(this.getRelatedPiecesProduct) as IRelatedPieces[];
-      return relatedProducts?.sort((a, b) => b.price - a.price);
+      return relatedProducts?.sort((a, b) => (sortType === 'max' ? b.price - a.price : a.price - b.price));
     },
   },
 });

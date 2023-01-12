@@ -21,7 +21,7 @@ import { useProductStore } from '@/stores/product';
 const { settings, breakpoints } = useSliderSettings();
 
 const $product = useProductStore();
-const sortRelatedPieces = computed(() => $product.getSortedRelatedPieces());
+const sortRelatedPieces = computed(() => $product.getSortedRelatedPieces('max'));
 </script>
 
 <style lang="scss" scoped>
