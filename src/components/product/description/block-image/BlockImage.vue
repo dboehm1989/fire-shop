@@ -2,13 +2,12 @@
   <div class="block-image">
     <div class="preview-images">
       <img
-        v-for="img in imgs"
-        :key="img.id"
+        v-for="(img, idx) in gallery"
+        :key="idx"
         class="preview-image"
-        :class="{ active: isActive(img.id) }"
-        :alt="img.name"
-        :src="`/src/assets/img/${img.preview}`"
-        @click="selectedID = img.id"
+        :class="{ active: isActive(idx) }"
+        :src="`/src/assets/img/thumb_${img.path}`"
+        @click="selectedIdx = idx"
       />
     </div>
     <div class="large-image active" :style="backgroundImageStyle" />
@@ -16,16 +15,16 @@
 </template>
 
 <script setup lang="ts">
-const imgs = [
-  { id: 1, name: 'Ultimate Image 1', preview: 'thumb_ultimate.png', original: 'ultimate.png' },
-  { id: 2, name: 'Ultimate Image 2', preview: 'thumb_ultimate-01.png', original: 'ultimate-01.png' },
-  { id: 3, name: 'Ultimate Image 3', preview: 'thumb_ultimate-02.png', original: 'ultimate-02.png' },
-];
+import { useProductStore } from '@/stores/product';
 
-const selectedID = ref(1);
-const isActive = (id: number) => selectedID.value === id;
-const selectedImg = computed(() => imgs.find(img => isActive(img.id)));
-const backgroundImageStyle = computed(() => `background-image: url(src/assets/img/${selectedImg.value?.original})`);
+const $product = useProductStore();
+const medias = computed(() => $product.getItem?.medias);
+const gallery = computed(() => medias.value?.filter(media => media.targetAttr === 'gallery'));
+
+const selectedIdx = ref(0);
+const isActive = (idx: number) => selectedIdx.value === idx;
+const selectedImg = computed(() => gallery.value?.find((_, idx) => isActive(idx)));
+const backgroundImageStyle = computed(() => `background-image: url(src/assets/img/${selectedImg.value?.path})`);
 </script>
 
 <style lang="scss" scoped>
