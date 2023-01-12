@@ -2,7 +2,7 @@
   <main>
     <SectionDescription />
     <SectionDetails />
-    <SectionRelatedPieces />
+    <SectionRelatedPiecesSlider />
   </main>
 </template>
 
@@ -11,7 +11,7 @@ import { useProductStore } from '@/stores/product';
 // Components
 import SectionDescription from './description/Description.vue';
 import SectionDetails from './details/Details.vue';
-import SectionRelatedPieces from './related-pieces/RelatedPieces.vue';
+import SectionRelatedPiecesSlider from './related-pieces/RelatedPieces.vue';
 
 onMounted(() => loadProductData());
 
