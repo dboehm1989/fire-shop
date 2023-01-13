@@ -11,6 +11,11 @@
   .level-item {
     width: 20px;
     height: auto;
+    margin-bottom: 0;
+
+    img {
+      max-height: 20px;
+    }
   }
 }
 
@@ -18,7 +23,7 @@
   position: absolute;
   max-width: 250px;
   max-height: 50px;
-  top: 6em;
+  top: 4em;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -44,10 +49,36 @@
 
 @media only screen and (max-width: $touch) {
   .logo { 
-    top: 4em;
+    top: 5em;
   }
 
   .navigation {
-    margin-top: 2em;
+    margin-top: 4em;
+
+    .level-item:not(:last-child) {
+      margin-right: 2em !important;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .level-left,
+  .level-right {
+    display: flex;
+    height: 25px;
+  }
+
+  .navigation {
+    flex-direction: column;
+
+    &__left {
+      margin-bottom: 1em;
+    }
+
+    .level-left,
+    .level-right {
+      justify-content: space-between;
+    }
   }
 }
