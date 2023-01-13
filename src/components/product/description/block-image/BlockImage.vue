@@ -25,6 +25,7 @@ const selectedIdx = ref(0);
 const isActive = (idx: number) => selectedIdx.value === idx;
 const selectedImg = computed(() => gallery.value?.find((_, idx) => isActive(idx)));
 const backgroundImageStyle = computed(() => `background-image: url(src/assets/img/${selectedImg.value?.path})`);
+const publicPath = process.env.BASE_URL;
 </script>
 
 <style lang="scss" scoped>
