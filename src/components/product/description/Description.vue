@@ -3,8 +3,8 @@
     <div class="desc__body hero-body">
       <div class="container">
         <div class="desc__content columns">
-          <BlockImage class="desc__image column" />
-          <BlockText class="desc__text column" />
+          <BlockImage class="desc__image column is-6" />
+          <BlockText class="desc__text column is-6" />
         </div>
       </div>
     </div>
@@ -17,21 +17,5 @@ import BlockText from './block-text/BlockText.vue';
 </script>
 
 <style lang="scss" scoped>
-.desc {
-  background: var(--color-gray-2);
-
-  &__body {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  &__content {
-    display: flex;
-  }
-
-  &__image {
-    min-width: 400px;
-    padding: 0;
-  }
-}
+@import './description.scss';
 </style>

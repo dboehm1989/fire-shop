@@ -8,6 +8,7 @@
 
   &__title {
     width: 75%;
+    font-size: 3rem;
     color: var(--color-dark);
     line-height: 1.2em;
     font-weight: 400;
@@ -39,5 +40,26 @@
   &__button {
     color: var(--color-white);
     background: var(--color-primary);
+  }
+}
+
+@media only screen and (max-width: $touch) {
+  .block-text {
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__box {
+      margin-left: 0;
+      width: 80%;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .block-text {
+    &__box {
+      width: 100%;
+    }
   }
 }
