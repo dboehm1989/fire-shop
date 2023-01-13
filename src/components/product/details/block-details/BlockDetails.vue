@@ -4,7 +4,7 @@
       <div class="details__items">
         <div class="details__headline">
           <p class="details__category">{{ category }}</p>
-          <h2 class="details__title is-size-4">{{ productDetails?.title }}</h2>
+          <h2 class="details__title">{{ productDetails?.title }}</h2>
         </div>
         <div class="columns is-multiline">
           <div v-for="(item, idx) in productDetails?.data" :key="idx" class="item column is-6">
