@@ -1,7 +1,7 @@
 <template>
   <div class="block-text">
     <p class="block-text__category">{{ item?.category }} WATCHES</p>
-    <h1 class="block-text__title title">{{ item?.title }}</h1>
+    <h1 class="block-text__title is-size-1">{{ item?.title }}</h1>
 
     <div class="block-text__box">
       <p class="block-text__price">{{ price?.priceFormatted }}</p>

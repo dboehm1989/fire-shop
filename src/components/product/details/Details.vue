@@ -2,13 +2,13 @@
   <section class="details hero">
     <div class="details__body hero-body">
       <div class="container">
-        <BlockDetails type="detail-1" :product-details="productDetails" />
+        <BlockDetails type="detail-1" category="Product Details" :product-details="productDetails" />
       </div>
     </div>
 
     <div class="details__body hero-body">
       <div class="container">
-        <BlockDetails type="detail-2" :product-details="productSpecifications" />
+        <BlockDetails type="detail-2" category="Specifications" :product-details="productSpecifications" />
       </div>
     </div>
   </section>

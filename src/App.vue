@@ -1,11 +1,11 @@
 <template>
-  <Header />
+  <HeaderBlock />
   <MainProduct />
-  <Footer />
+  <FooterBlock />
 </template>
 
 <script setup lang="ts">
-import Header from '@/components/header/Header.vue';
+import HeaderBlock from '@/components/header/Header.vue';
 import MainProduct from '@/components/product/Product.vue';
-import Footer from '@/components/footer/Footer.vue';
+import FooterBlock from '@/components/footer/Footer.vue';
 </script>

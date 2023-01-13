@@ -2,30 +2,38 @@
   &__category {
     color: var(--color-primary);
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   &__title {
-    font-size: 3.5em;
     width: 75%;
     color: var(--color-dark);
+    line-height: 1.2em;
     font-weight: 400;
+    margin-bottom: 30px;
   }
 
   &__box {
     margin-left: 4em;
-    width: 50%;
+    width: 60%;
   }
 
   &__price {
     color: var(--color-primary);
+    margin-bottom: 1em;
   }
 
   &__sku {
+    color: var(--color-gray);
+    font-weight: 300;
     font-size: smaller;
   }
 
   &__text {
+    color: var(--color-gray);
     margin-bottom: 1.5em;
+    font-weight: 400;
   }
 
   &__button {
