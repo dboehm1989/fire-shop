@@ -5,6 +5,7 @@ import AutoImport from 'unplugin-auto-import/vite';
 
 export default defineConfig(({ command, mode }) => {
   return {
+    base: '/',
     plugins: [
       vue(),
       AutoImport({
@@ -24,7 +25,6 @@ export default defineConfig(({ command, mode }) => {
     },
     build: {
       emptyOutDir: true,
-      chunkSizeWarningLimit: 1000,
     },
     css: {
       preprocessorOptions: {

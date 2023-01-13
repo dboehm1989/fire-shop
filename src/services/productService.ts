@@ -1,6 +1,8 @@
 import { IProductPrice } from '@/interface/product.i';
 import axios from 'axios';
 import { IProduct } from '@/interface/product.i';
+import exampleProducts from '@/assets/data/products.json';
+import examplePrice from '@/assets/data/price.json';
 
 class ProductService {
   async getProducts() {
@@ -9,7 +11,7 @@ class ProductService {
       return response.data as IProduct[];
     } catch (error) {
       console.error(error);
-      return [] as IProduct[];
+      return exampleProducts;
     }
   }
   async getProductPrice() {
@@ -18,7 +20,7 @@ class ProductService {
       return response.data as IProductPrice[];
     } catch (error) {
       console.error(error);
-      return [] as IProductPrice[];
+      return examplePrice;
     }
   }
 }
