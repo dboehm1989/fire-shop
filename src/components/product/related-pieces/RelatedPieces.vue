@@ -2,7 +2,7 @@
   <section class="slider hero">
     <div class="slider__body hero-body">
       <div class="container">
-        <div class="columns">
+        <div class="slider__columns columns">
           <div class="description column is-3">
             <p class="description__category">Altiplano Collection</p>
             <h2 class="description__title is-size-3">Related Pieces</h2>
