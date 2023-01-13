@@ -5,7 +5,7 @@ import AutoImport from 'unplugin-auto-import/vite';
 
 export default defineConfig(({ command, mode }) => {
   return {
-    base: '/',
+    base: './',
     plugins: [
       vue(),
       AutoImport({
