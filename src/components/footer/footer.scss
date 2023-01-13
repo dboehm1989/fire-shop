@@ -13,3 +13,13 @@
     }
   }
 }
+
+@media only screen and (max-width: $mobile) {
+  .footer {
+    &__address,
+    &__menu-1 ,
+    &__menu-2  {
+      width: 100%;
+    }
+  }
+}

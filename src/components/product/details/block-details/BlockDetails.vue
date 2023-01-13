@@ -55,8 +55,6 @@ const props = defineProps({
 
 const $product = useProductStore();
 const detailsImg = computed(() => $product.getItem?.medias?.find(media => media.targetAttr === props.type)?.path);
-
-// such an import is important for an import process!
 const detailsImgSrc = computed(() => new URL(`/src/assets/img/${detailsImg.value}`, import.meta.url).href);
 </script>
 

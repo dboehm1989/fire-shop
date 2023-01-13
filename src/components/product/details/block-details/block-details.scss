@@ -77,7 +77,6 @@
 
     img {
       background: var(--color-dark);
-      max-height: 420px;
     }
   }
 
@@ -124,14 +123,13 @@
     }
 
     &__image img {
-      max-height: fit-content;
+      max-height: 600px;
     }
 
     &.detail-1 .details__image,
     &.detail-2 .details__image {
       justify-content: center;
     }
-
   }
 }
 
