@@ -11,7 +11,7 @@
             <div class="item__wrapper">
               <div class="columns">
                 <div class="column is-3">
-                  <ImportImage :src="`/src/assets/icon/icon-${item.sortOrder}.png`" :alt="type" />
+                  <img :src="`/src/assets/icon/icon-${item.sortOrder}.png`" :alt="type" />
                 </div>
                 <div class="item__content column is-9">
                   <h3 class="item__title">{{ item.title }}</h3>
@@ -27,7 +27,7 @@
 
     <div class="column is-4">
       <div class="details__image">
-        <img :src="productDetailsImgSrc" :alt="type" />
+        <img :src="detailsImgSrc" :alt="type" />
       </div>
     </div>
   </div>
@@ -36,8 +36,6 @@
 <script setup lang="ts">
 import { IProductDetails } from '@/interface/product.i';
 import { useProductStore } from '@/stores/product';
-
-import ImportImage from './ImportImage.vue';
 
 const props = defineProps({
   type: {
@@ -56,13 +54,10 @@ const props = defineProps({
 });
 
 const $product = useProductStore();
-const medias = computed(() => $product.getItem?.medias);
+const detailsImg = computed(() => $product.getItem?.medias?.find(media => media.targetAttr === props.type)?.path);
 
-const productDetailsImgSrc = computed(() => {
-  const img = medias.value?.find(media => media.targetAttr === props.type);
-  // such an import is important for an import process!
-  return new URL(`/src/assets/img/${img?.path}`, import.meta.url).href;
-});
+// such an import is important for an import process!
+const detailsImgSrc = computed(() => new URL(`/src/assets/img/${detailsImg.value}`, import.meta.url).href);
 </script>
 
 <style lang="scss" scoped>

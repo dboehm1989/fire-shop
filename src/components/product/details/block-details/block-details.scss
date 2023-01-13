@@ -26,7 +26,7 @@
   }
 
   &__items {
-    max-width: 500px;
+    max-width: 600px;
 
     .item {
       &__img {
@@ -49,7 +49,6 @@
       }
 
       &__text {
-        font-size: small;
         text-transform: uppercase;
         font-weight: 600;
         letter-spacing: 1px;
