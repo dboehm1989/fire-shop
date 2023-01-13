@@ -21,6 +21,6 @@ const item = computed(() => $product.getItem);
 const price = computed(() => $product.getPrice);
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import './block-text.scss';
 </style>

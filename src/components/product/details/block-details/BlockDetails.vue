@@ -58,6 +58,6 @@ const medias = computed(() => $product.getItem?.medias);
 const productDetailsImg = computed(() => medias.value?.find(media => media.targetAttr === props.type));
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import './block-details.scss';
 </style>

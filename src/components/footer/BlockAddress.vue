@@ -24,7 +24,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .address {
   &__logo {
     max-width: 160px;
