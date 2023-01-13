@@ -2,6 +2,11 @@
   <header>
     <div class="container">
       <BlockTopbar />
+
+      <div class="logo">
+        <a href="#" rel="home" class="logolink"><img src="@/assets/logo/logo.png" /></a>
+      </div>
+
       <BlockNavigation />
     </div>
   </header>

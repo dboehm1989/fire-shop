@@ -1,8 +1,3 @@
-header .container {
-  height: 120px;
-}
-
-// Topbar
 .topbar {
   padding: 1em 0;
   display: flex;
@@ -19,17 +14,20 @@ header .container {
   }
 }
 
-// Navigation
+.logo {
+  position: absolute;
+  max-width: 250px;
+  max-height: 50px;
+  top: 6em;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
 .navigation {
   padding: 1em 0;
   display: flex;
   justify-content: space-between;
-
-  &__logo {
-    max-width: 250px;
-    max-height: 50px;
-  }
-
   
   .level-left .level-item:not(:last-child), 
   .level-right .level-item:not(:last-child) {
@@ -44,3 +42,12 @@ header .container {
   
 }
 
+@media only screen and (max-width: $touch) {
+  .logo { 
+    top: 4em;
+  }
+
+  .navigation {
+    margin-top: 2em;
+  }
+}

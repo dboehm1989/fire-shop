@@ -8,12 +8,6 @@
       </div>
     </div>
 
-    <div class="navigation__logo">
-      <a href="#" rel="home" class="logolink">
-        <img src="@/assets/logo/logo.png" />
-      </a>
-    </div>
-
     <div class="navigation__right">
       <div class="level-right">
         <a class="level-item" title="Academy">Academy</a>

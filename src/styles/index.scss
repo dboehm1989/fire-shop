@@ -1,5 +1,4 @@
-@import './font';
-@import './variables';
+@import './fonts';
 
 * {
   margin: 0;
@@ -21,4 +20,10 @@ h3,
 h4
 {
   font-family: var(--font-family-primary);
+}
+
+@media only screen and (max-width: $touch) {
+  .container {
+    padding: .5em 1.5em;
+  }
 }

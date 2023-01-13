@@ -26,5 +26,12 @@ export default defineConfig(({ command, mode }) => {
       emptyOutDir: true,
       chunkSizeWarningLimit: 1000,
     },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@import "@/styles/_variables.scss";`,
+        },
+      },
+    },
   };
 });
