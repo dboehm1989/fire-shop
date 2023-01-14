@@ -73,7 +73,7 @@ npm install
 npm run dev
 ```
 
-**Kompiliert und minimiert alle Dateien für die Produktion**
+**Build-Prozess für die Produktion**
 
 ```shell
 npm run build
@@ -81,7 +81,7 @@ npm run build
 
 **Produktionsmodus:**
 
-1. `npm run build` Build-Prozess ausführen.
+1. Build-Prozess ausführen.
 
 2. Voarschau starten.
 
