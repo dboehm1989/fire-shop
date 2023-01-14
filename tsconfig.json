@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": ["vuetify", "vite/client"],
+    "types": ["vite/client"],
     "paths": {
       "@/*": ["src/*"]
     },
@@ -28,5 +28,5 @@
     ]
   },
   "include": ["env.d.ts", "components.d.ts", "src/**/*", "src/**/*.vue"],
-  "exclude": ["node_modules", "tests/*"]
+  "exclude": ["node_modules"]
   }
