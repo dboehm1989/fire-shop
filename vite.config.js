@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { fileURLToPath, URL } from 'node:url';
 import AutoImport from 'unplugin-auto-import/vite';
+import viteImagemin from 'vite-plugin-imagemin';
 
 export default defineConfig(({ command, mode }) => {
   return {
@@ -12,6 +13,18 @@ export default defineConfig(({ command, mode }) => {
         imports: ['vue', 'pinia'],
         dts: 'src/auto-imports.d.ts',
         vueTemplate: true,
+      }),
+      viteImagemin({
+        optipng: {
+          optimizationLevel: 7,
+        },
+        mozjpeg: {
+          quality: 20,
+        },
+        pngquant: {
+          quality: [0.8, 0.9],
+          speed: 4,
+        },
       }),
     ],
     server: {
