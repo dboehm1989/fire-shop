@@ -1,11 +1,12 @@
-# The Brand shop landigpage
+# Shop landigpage
+
+Das Projekt zeigt, wie man Vue 3, Vite, Pinia, Bulma und TypeScript im Frontend verwendet.
 
 ## Gliederung
 
 - [Ordnerstruktur](#ordnerstruktur)
-- [Update](#update)
+- [Setup](#setup)
 - [Start](#start)
-- [SASS/SCSS](#SASS/SCSS)
 
 ## Ordnerstruktur
 
@@ -13,17 +14,54 @@ Struktur des Handbuch-Repository:
 
 ```shell
     .
-    ├── backend                  # Backend
-    │   ├── test.http            # Api calls zum testen des Backends
-    ├── frontend                 # Frontend
-    │   ├── assets               # Manuell verwaltete Bilder, Schriften, JS, CSS
+    ├── public                   # Startpunkt der HTML-Website
+    ├── src                      # Hauptordner zum entwickeln
+    │   ├── assets               # Manuell verwaltete Bilder, Schriften
     │   ├── components           # Vue Komponente
-    │   ├── libs                 # Bibliotheken (über update.cmd aktualisiert)
-    │   ├── utils                # Plugins
-    │   ├── pages                # Hauptkomponenten
-    │   └── index.html           # Einstieg
-    ├── service.exe              # WebService
-    └── update.cmd               # Skript zum aktualisieren aller Dependencies
+    │   ├── interface            # Struktur von Objekten, die in der Anwendung verwendet werden
+    │   ├── services             # API Schnittstellen
+    │   ├── stores               # Zustände der Anwendung verwalten
+    │   └── styles               # Styling Regeln der Anwendung
+    │   :── App.vue              # Die Wurzel der Hauptkomponente
+    │   :── auto-imports.d.ts    # Automatisch generierte imports aus der vite.config.ts
+    │   :── main.ts              # Dient zum start der Anwendendung
+    :── .eslintignore            # ESlint Regeln ignorieren
+    :── .eslintrc.yml            # ESlint Regeln
+    :── .gitignore               # Auflistung von Dateien, die Git ignorieren soll
+    :── .prettierignore          # Prettier Regeln ignorieren
+    :── .prettierrc              # Prettier Regeln
+    :── index.html               # Einstieg
+    :── package-lock.json        # Verwaltet Abhängigkeiten und Versionen von npm-Paketen
+    :── package.json             # Grundlegenden Metadaten eines npm-Projekts
+    :── tsconfig.json            # Typescript konfigurieren
+    :── vite.config.ts           # Vite konfigurieren
 ```
 
+## Setup
+
+Empfehlung:
+Installieren Sie die folgenden VSCode Plugins um das Entwickeln komfortabler zu gestalten.
+Im `VS Code` in den Erweiterungen bitte `Vetur` deaktivieren und `Volar` aktivieren.
+
+**VSCode Plugins:**
+
+- dbaeumer.vscode-eslint
+- esbenp.prettier-vscode
+- stylelint.vscode-stylelint
+- Vue.volar
+- Vue.vscode-typescript-vue-plugin"
+
+Beim Implementieren des Projekts wurde folgende Umgebung genutzt:
+
+- [x] [nvm version](https://github.com/nvm-sh/nvm) 1.1.10 Mit nvm kann man schnell node über die Befehlszeile wechseln
+- [x] npm version 9.2.0
+- [x] node version 18.13.0
+
 ## Start
+
+Als erstes Schritt sollten Sie die Abhängigkeiten des Projekts installieren, die in der package.json aufgelistet sind.
+
+1. `npm install` Abhängigkeiten des Projekts installieren, die in der package.json aufgelistet sind.
+2. `npm run dev` Entwicklungsmodus starten.
+3. `npm run build` Kompiliert und minimiert alle Dateien für die Produktion.
+4. `npm run preview` Produktionsmodus starten.
