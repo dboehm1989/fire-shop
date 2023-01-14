@@ -1,5 +1,16 @@
+.footer {
+  padding: 5em 0 1.5em 0;
+  background-color: var(--color-white);
+
+  &__copyright p {
+    color: var(--color-gray);
+    font-size: small;
+  }
+}
+
 @media only screen and (max-width: $touch) {
   .footer {
+
     &__address {
       width: 40%;
     }

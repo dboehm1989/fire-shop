@@ -11,7 +11,7 @@
             <div class="item__wrapper">
               <div class="columns">
                 <div class="column is-3">
-                  <img :src="`/src/assets/icon/icon-${item.sortOrder}.png`" :alt="type" />
+                  <img class="item__image" :src="`/src/assets/icon/icon-${item.sortOrder}.png`" :alt="type" />
                 </div>
                 <div class="item__content column is-9">
                   <h3 class="item__title">{{ item.title }}</h3>

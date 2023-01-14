@@ -1,12 +1,12 @@
 <template>
   <section class="details hero">
-    <div class="details__body--1 hero-body">
+    <div class="details__body details__body--1 hero-body">
       <div class="container">
         <BlockDetails type="detail-1" category="Product Details" :product-details="productDetails" />
       </div>
     </div>
 
-    <div class="details__body--2 hero-body">
+    <div class="details__body details__body--2 hero-body">
       <div class="container">
         <BlockDetails type="detail-2" category="Specifications" :product-details="productSpecifications" />
       </div>

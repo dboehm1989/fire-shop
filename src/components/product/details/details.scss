@@ -1,7 +1,11 @@
 
 .details {
-  &__body {
-    padding: 5em 0;
+  &__body--1 {
+    padding: 8em 0 4em 0;
+  }
+
+  &__body--2 {
+    padding: 4em 0 8em 0;
   }
 }
 

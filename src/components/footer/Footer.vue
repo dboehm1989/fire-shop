@@ -15,6 +15,11 @@
             <BlockMenu title="Stay in touch" :list="newsletterList" />
           </div>
         </div>
+
+        <div class="footer__copyright">
+          <hr class="footer__divider" />
+          <p>© Copyright 2018 The Brand</p>
+        </div>
       </div>
     </div>
   </footer>
