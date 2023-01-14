@@ -14,7 +14,7 @@ Struktur des Handbuch-Repository:
 
 ```shell
     .
-    ├── public                   # Startpunkt der HTML-Website
+    ├── public                   # Statisches Verzeichnis
     ├── src                      # Hauptordner zum entwickeln
     │   ├── assets               # Manuell verwaltete Bilder, Schriften
     │   ├── components           # Vue Komponente
@@ -45,15 +45,15 @@ Im `VS Code` in den Erweiterungen bitte `Vetur` deaktivieren und `Volar` aktivie
 
 **VSCode Plugins:**
 
-- dbaeumer.vscode-eslint
-- esbenp.prettier-vscode
-- stylelint.vscode-stylelint
-- Vue.volar
-- Vue.vscode-typescript-vue-plugin"
+- `dbaeumer.vscode-eslint`
+- `esbenp.prettier-vscode`
+- `stylelint.vscode-stylelint`
+- `Vue.volar`
+- `Vue.vscode-typescript-vue-plugin`
 
 Beim Implementieren des Projekts wurde folgende Umgebung genutzt:
 
-- [x] [nvm version](https://github.com/nvm-sh/nvm) 1.1.10 Mit nvm kann man schnell node über die Befehlszeile wechseln
+- [x] [nvm version](https://github.com/nvm-sh/nvm) `1.1.10 Mit nvm kann man schnell node über die Befehlszeile wechseln`
 - [x] npm version 9.2.0
 - [x] node version 18.13.0
 
