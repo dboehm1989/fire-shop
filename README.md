@@ -74,6 +74,8 @@ npm run dev
 
 **Build-Prozess für die Produktion**
 
+Die Bilderkomprimierung kann etwas Zeit in Anspruch nehmen.
+
 ```shell
 npm run build
 ```
