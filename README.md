@@ -59,28 +59,29 @@ Beim Implementieren des Projekts wurde folgende Umgebung genutzt:
 
 ## Start
 
-Als erstes Schritt sollten Sie die Abhängigkeiten des Projekts installieren, die in der package.json aufgelistet sind.
-
-1. Abhängigkeiten des Projekts installieren, die in der package.json aufgelistet sind.
+**Abhängigkeiten des Projekts installieren:**
 
 ```shell
 npm install
 ```
 
-2. Entwicklungsmodus starten.
+**Entwicklungsmodus starten**
 
 ```shell
 npm run dev
 ```
 
-3. Kompiliert und minimiert alle Dateien für die Produktion.
+**Kompiliert und minimiert alle Dateien für die Produktion**
 
 ```shell
 npm run build
 ```
 
-4. Produktionsmodus starten.
+**Produktionsmodus starten**
 
 ```shell
+# 1. Build-Prozess starten
+npm run build
+# 2. Vorschau
 npm run preview
 ```
