@@ -81,7 +81,9 @@ npm run build
 
 **Produktionsmodus:**
 
-Bitte davor `npm run build` den Build-Prozess ausführen.
+1. `npm run build` Build-Prozess ausführen.
+
+2. Voarschau starten.
 
 ```shell
 npm run preview
