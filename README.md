@@ -7,6 +7,7 @@ Das Projekt zeigt, wie man Vue 3, Vite, Pinia, Bulma und TypeScript im Frontend 
 - [Ordnerstruktur](#ordnerstruktur)
 - [Setup](#setup)
 - [Start](#start)
+- [Plugins](#plugins)
 
 ## Ordnerstruktur
 
@@ -86,3 +87,8 @@ npm run build
 ```shell
 npm run preview
 ```
+
+## Plugins
+
+- [AutoImport](https://github.com/antfu/unplugin-auto-import): Automatisches Importieren von APIs bei Bedarf für Vite, Pinia und etc.
+- [viteImagemin](https://github.com/vbenjs/vite-plugin-imagemin): Es ermöglicht das Komprimieren von Bildern während des Build-Prozesses.
