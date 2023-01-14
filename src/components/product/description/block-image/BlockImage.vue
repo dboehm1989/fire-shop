@@ -17,8 +17,8 @@
 </template>
 
 <script setup lang="ts">
-import { useLoadImages } from './use/useLoadImages';
-const { selectedIdx, galleryWithFullpath, selectedImg, isActive } = useLoadImages();
+import { useLoadDescriptionImages } from './use/useLoadDescriptionImages';
+const { selectedIdx, galleryWithFullpath, selectedImg, isActive } = useLoadDescriptionImages();
 </script>
 
 <style lang="scss" scoped>

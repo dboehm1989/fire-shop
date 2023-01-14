@@ -7,11 +7,11 @@
           <h2 class="details__title">{{ productDetails?.title }}</h2>
         </div>
         <div class="columns is-multiline">
-          <div v-for="(item, idx) in productDetails?.data" :key="idx" class="item column is-6">
+          <div v-for="(item, idx) in detailsIconsWithFullPath" :key="idx" class="item column is-6">
             <div class="item__wrapper">
               <div class="columns">
                 <div class="column is-3">
-                  <img class="item__image" :src="`/src/assets/icon/icon-${item.sortOrder}.png`" :alt="type" />
+                  <img class="item__image" :src="item.path" :alt="type" />
                 </div>
                 <div class="item__content column is-9">
                   <h3 class="item__title">{{ item.title }}</h3>
@@ -27,7 +27,7 @@
 
     <div class="column is-4">
       <div class="details__image">
-        <img :src="detailsImgSrc" :alt="type" />
+        <img :src="detailImgSrc" :alt="type" />
       </div>
     </div>
   </div>
@@ -35,7 +35,7 @@
 
 <script setup lang="ts">
 import { IProductDetails } from '@/interface/product.i';
-import { useProductStore } from '@/stores/product';
+import { useLoadDetailsImages } from './use/useLoadDetailsImages';
 
 const props = defineProps({
   type: {
@@ -53,9 +53,7 @@ const props = defineProps({
   },
 });
 
-const $product = useProductStore();
-const detailsImg = computed(() => $product.getItem?.medias?.find(media => media.targetAttr === props.type)?.path);
-const detailsImgSrc = computed(() => new URL(`/src/assets/img/${detailsImg.value}`, import.meta.url).href);
+const { detailImgSrc, detailsIconsWithFullPath } = useLoadDetailsImages(props);
 </script>
 
 <style lang="scss" scoped>

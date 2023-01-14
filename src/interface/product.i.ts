@@ -1,4 +1,4 @@
-interface IProductDetailsData {
+export interface IProductDetailsData {
   title: string;
   text: string;
   iconTarget: string;

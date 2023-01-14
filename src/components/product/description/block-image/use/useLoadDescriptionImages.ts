@@ -1,7 +1,7 @@
 import { useProductStore } from '@/stores/product';
 import { IMedia } from '@/interface/product.i';
 
-export function useLoadImages() {
+export function useLoadDescriptionImages() {
   const $product = useProductStore();
 
   const gallery = computed(() => $product.getItem?.medias?.filter(media => media.targetAttr === 'gallery'));
