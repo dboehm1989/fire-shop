@@ -23,7 +23,7 @@
               <Slide v-for="(item, idx) of items" :key="idx">
                 <div class="item">
                   <div class="item__wrapper">
-                    <img class="item__image" :src="`/src/assets/img/${item?.imgPath}`" />
+                    <img class="item__image" :src="item?.imgPath" />
                     <div class="item__content">
                       <p class="item__category">{{ item?.category }}</p>
                       <h3 class="item__title is-size-4">{{ item?.subTitle }}</h3>

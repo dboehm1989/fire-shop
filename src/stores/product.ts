@@ -25,8 +25,8 @@ export const useProductStore = defineStore('product', {
 
       const { id, subTitle, category, medias } = product;
       const { price, priceFormatted } = productPrice;
-      const imgPath = medias.find(media => media.targetAttr === 'sliderImage')?.path;
-
+      const path = medias.find(media => media.targetAttr === 'sliderImage')?.path;
+      const imgPath = path ? new URL(`/src/assets/img/${path}`, import.meta.url).href : undefined;
       return { id, sku, price, priceFormatted, subTitle, category, imgPath } as IRelatedPieces;
     },
     getSortedRelatedPieces(sortType: 'min' | 'max') {

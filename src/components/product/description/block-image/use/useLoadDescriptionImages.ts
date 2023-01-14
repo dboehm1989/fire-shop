@@ -9,7 +9,6 @@ export function useLoadDescriptionImages() {
 
   const selectedIdx = ref(0);
   const isActive = (idx: number) => selectedIdx.value === idx;
-  const selectedImg = computed(() => galleryWithFullpath.value?.find((_, idx) => isActive(idx))?.path);
 
   // such dynamic import is important for vite build process!
   function setGalleryFullPath(media: IMedia) {
@@ -21,7 +20,7 @@ export function useLoadDescriptionImages() {
   return {
     isActive,
     selectedIdx,
-    selectedImg,
     galleryWithFullpath,
+    selectedImg: computed(() => galleryWithFullpath.value?.find((_, idx) => isActive(idx))?.path),
   };
 }
