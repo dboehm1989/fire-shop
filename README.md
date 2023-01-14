@@ -40,7 +40,9 @@ Struktur des Handbuch-Repository:
 ## Setup
 
 Empfehlung:
+
 Installieren Sie die folgenden VSCode Plugins um das Entwickeln komfortabler zu gestalten.
+
 Im `VS Code` in den Erweiterungen bitte `Vetur` deaktivieren und `Volar` aktivieren.
 
 **VSCode Plugins:**
@@ -53,7 +55,7 @@ Im `VS Code` in den Erweiterungen bitte `Vetur` deaktivieren und `Volar` aktivie
 
 Beim Implementieren des Projekts wurde folgende Umgebung genutzt:
 
-- [x] [nvm version](https://github.com/nvm-sh/nvm) `1.1.10 Mit nvm kann man schnell node über die Befehlszeile wechseln`
+- [x] nvm version 1.1.10
 - [x] npm version 9.2.0
 - [x] node version 18.13.0
 
@@ -77,7 +79,8 @@ npm run dev
 npm run build
 ```
 
-**Produktionsmodus**
+**Produktionsmodus:**
+
 Bitte davor `npm run build` den Build-Prozess ausführen.
 
 ```shell
