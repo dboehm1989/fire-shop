@@ -84,7 +84,7 @@ npm run build
 
 1. Build-Prozess ausführen.
 
-2. Voarschau starten.
+2. Vorschau starten.
 
 ```shell
 npm run preview
