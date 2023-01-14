@@ -1,14 +1,15 @@
-interface IMedia {
-  targetAttr: string;
-  path: string;
-  sortOrder: number;
-}
-
 interface IProductDetailsData {
   title: string;
   text: string;
   iconTarget: string;
   sortOrder: number;
+}
+
+export interface IMedia {
+  targetAttr: string;
+  sortOrder: number;
+  path: string;
+  preview?: string;
 }
 
 export interface IProductDetails {
