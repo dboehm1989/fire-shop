@@ -22,7 +22,6 @@
   },
   "vueCompilerOptions": {
     "target": 3,
-    "experimentalCompatMode": 2,
     "extensions": [
       ".vue"
     ]
