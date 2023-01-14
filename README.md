@@ -39,11 +39,9 @@ Struktur des Handbuch-Repository:
 
 ## Setup
 
-Empfehlung:
-
 Installieren Sie die folgenden VSCode Plugins um das Entwickeln komfortabler zu gestalten.
 
-Im `VS Code` in den Erweiterungen bitte `Vetur` deaktivieren und `Volar` aktivieren.
+Im `VSCode` in den Erweiterungen bitte `Vetur deaktivieren` und `Volar aktivieren`.
 
 **VSCode Plugins:**
 
