@@ -65,7 +65,7 @@ Beim Implementieren des Projekts wurde folgende Umgebung genutzt:
 npm install
 ```
 
-**Entwicklungsmodus starten**
+**Entwicklungsmodus**
 
 ```shell
 npm run dev
@@ -77,11 +77,9 @@ npm run dev
 npm run build
 ```
 
-**Produktionsmodus starten**
+**Produktionsmodus**
+Bitte davor `npm run build` den Build-Prozess ausführen.
 
 ```shell
-# 1. Build-Prozess starten
-npm run build
-# 2. Vorschau
 npm run preview
 ```
